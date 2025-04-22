@@ -1,17 +1,24 @@
 import "./PokemonCard.css";
 
-function PokemonCard() {
+interface pokemons {
+  pokemon: {
+    name: string;
+    image: string;
+    type: string;
+    id: number;
+  };
+}
+
+function PokemonCard({ pokemon }: pokemons) {
   return (
     <figure className="pokemon-card">
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-        alt="bulbasaur"
-      />
+      <img src={pokemon.image} alt={pokemon.name} />
       <figcaption>
-        <h2> #0001</h2>
-        <h2>bulbasaur</h2>
+        <h2> {pokemon.id} </h2>
 
-        <div className="pokemon-type">Grass</div>
+        <h2>{pokemon.name}</h2>
+
+        <div className="pokemon-type">{pokemon.type}</div>
       </figcaption>
     </figure>
   );
