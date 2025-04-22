@@ -3,3 +3,109 @@
   padding: 0;
   box-sizing: border-box;
 }
+.Logo {
+  display: none;
+}
+main > p {
+  display: none;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ff0000;
+  height: 150px;
+}
+footer > .social-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+footer > section > .legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fdfdfd;
+}
+footer > section > .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ff0000;
+}
+.social > a > .social-icon {
+  height: 30px;
+  width: 30px;
+  margin: 0 1vw;
+}
+
+footer > .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1vw;
+  height: 100%;
+  width: 100%;
+}
+.input-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 230px;
+  margin: 0 1vw;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fdfdfd;
+  border-left: 1px solid #fdfdfd;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fdfdfd;
+  &::placeholder {
+    color: #ffaaaa;
+    text-align: center;
+  }
+}
+
+.btn-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  margin: 0 1vw;
+  outline: none;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    padding: 10px 0;
+  }
+  footer > .social-legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .social {
+    margin: 20px 0;
+  }
+  .legal {
+    margin: 20px 0;
+
+    color: #fdfdfd;
+  }
+}
