@@ -10,8 +10,8 @@ import App from "./App";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
-import Pokemons from "./components/Pokemons";
 import Home from "./pages/Home";
+import Pokemons from "./pages/Pokemons";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";

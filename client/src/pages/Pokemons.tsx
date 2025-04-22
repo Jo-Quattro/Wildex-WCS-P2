@@ -1,5 +1,4 @@
-import PokemonCard from "./PokemonCard";
-import "./PokemonCard.css";
+import PokemonCard from "../components/PokemonCard";
 
 function Pokemons() {
   return (

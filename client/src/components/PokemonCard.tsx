@@ -1,3 +1,5 @@
+import "./PokemonCard.css";
+
 function PokemonCard() {
   return (
     <figure className="pokemon-card">
