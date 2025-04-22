@@ -1,5 +1,4 @@
 import PokemonCard from "../components/PokemonCard";
-import "./PokemonCard.css";
 
 const pokemonGen1 = [
   {
