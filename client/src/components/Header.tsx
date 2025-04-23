@@ -1,13 +1,28 @@
 function Header() {
   return (
     <header>
-      <section className="menu-burger">
-        <img src="./src/assets/images/MenuBurgerRed.svg" alt="" width="48px" />
-      </section>
-      <label htmlFor="recherche">Quel pokemon</label>
-      <input type="text" placeholder="Recherche ton pokemon" name="recherche" />
-      <section className="Logo">
-        <img src="./src/assets/images/WildexlogoV1.png" alt="Logo du site" />
+      <section className="burger-logo-search">
+        <section className="section-menu-burger">
+          <img
+            className="menu-burger"
+            src="./src/assets/images/MenuBurgerRed.svg"
+            alt="Menu burger"
+          />
+          <img
+            className="logo"
+            src="./src/assets/images/WildexlogoV1.png"
+            alt="Logo du site"
+          />
+        </section>
+        <section className="search-bar">
+          <label htmlFor="recherche">Pokemon</label>
+          <input
+            type="text"
+            placeholder="Recherche son nom ici !"
+            name="recherche"
+          />
+          <button type="button">Rechercher</button>
+        </section>
       </section>
       <nav>
         <ul>

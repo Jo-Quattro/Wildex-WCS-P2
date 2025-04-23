@@ -3,12 +3,139 @@
   padding: 0;
   box-sizing: border-box;
 }
-.Logo {
-  display: none;
+
+header {
+  height: 200px;
+  width: 100vw;
 }
-main > p {
-  display: none;
+header > .burger-logo-search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 160px;
 }
+header > section > .section-menu-burger {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 50vw;
+}
+header > section > section > .logo {
+  height: 150px;
+  width: 389px;
+}
+header > section > section > .menu-burger {
+  width: 48px;
+}
+header > section > .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header > section > .search-bar > input {
+  height: 30px;
+  width: 230px;
+  outline: none;
+  margin: 10px 0;
+  background-color: #3466af;
+  color: #fdfdfd;
+  border: none;
+  border-bottom: 2px solid #1d2c5e;
+  border-left: 2px solid #1d2c5e;
+  border-radius: 5px;
+  padding: 0 15px;
+  &::placeholder {
+    color: #fdfdfd;
+    text-align: center;
+  }
+}
+.search-bar > button {
+  height: 30px;
+  width: 100px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #f00;
+  color: #fdfdfd;
+}
+header > nav {
+  margin-top: 25px;
+  & > ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    & > li {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.input-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 230px;
+  margin: 0 1vw;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fdfdfd;
+  border-left: 1px solid #fdfdfd;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fdfdfd;
+  &::placeholder {
+    color: #ffaaaa;
+    text-align: center;
+  }
+}
+
+.btn-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  margin: 0 1vw;
+  outline: none;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+}
+
+.map-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  margin-bottom: 50px;
+  & > figure {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    & > img {
+      object-fit: cover;
+      width: 600px;
+      height: 400px;
+      margin: 20px;
+    }
+  }
+}
+
+.title-map {
+  text-align: center;
+}
+
+.paragraphe {
+  font-size: 120%;
+  width: 100vw;
+  text-align: center;
+  margin-top: 50px;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
@@ -52,40 +179,15 @@ footer > .subscribe {
   height: 100%;
   width: 100%;
 }
-.input-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 230px;
-  margin: 0 1vw;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #fdfdfd;
-  border-left: 1px solid #fdfdfd;
-  border-radius: 5px;
-  background-color: #ff4444;
-  color: #fdfdfd;
-  &::placeholder {
-    color: #ffaaaa;
-    text-align: center;
-  }
-}
-
-.btn-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 100px;
-  margin: 0 1vw;
-  outline: none;
-  border: 2px solid #ff0000;
-  border-radius: 5px;
-  background-color: #fdfdfd;
-}
 
 @media screen and (max-width: 768px) {
+  header > section > section > .logo {
+    height: 80px;
+    width: auto;
+  }
+  nav {
+    display: none;
+  }
   footer {
     display: flex;
     flex-direction: column-reverse;
@@ -107,5 +209,28 @@ footer > .subscribe {
     margin: 20px 0;
 
     color: #fdfdfd;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header > .burger-logo-search {
+    display: flex;
+    flex-direction: column;
+    & > .section-menu-burger {
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+      width: 100vw;
+      & > .menu-burger {
+        margin: 10vh 0 0 0;
+      }
+      & > .logo {
+        margin: 10vh 5vw 0 0;
+      }
+    }
+  }
+  header > nav {
+    display: none;
+    background-color: #f00;
   }
 }
