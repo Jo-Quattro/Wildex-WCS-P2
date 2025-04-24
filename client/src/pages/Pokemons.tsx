@@ -32,16 +32,17 @@ function Pokemons() {
     fetch("https://pokeapi.co/api/v2/generation/1/") //Fetching the 151 first Pokemons
       .then((response) => response.json())
       .then((data: genResponse) => {
-        const pokeSpecies = data.pokemon_species;
+        const pokeSpecie = data.pokemon_species;
         // We map through the array of objects and fetch each Pokemon individually
-        const allPokemonsPromises = pokeSpecies.map((pokeSpecie) =>
+        const allPokemons = pokeSpecie.map((pokeSpecie) =>
           fetch(`https://pokeapi.co/api/v2/pokemon/${pokeSpecie.name}`).then(
             (response) => response.json(),
           ),
         );
         // We use Promise.all to wait for all the fetches to finish before resolving the promise
-        Promise.all(allPokemonsPromises).then((results: pokemonType[]) => {
+        Promise.all(allPokemons).then((results: pokemonType[]) => {
           setPokemons(results);
+          console.info(results);
         });
       });
   }, []);
