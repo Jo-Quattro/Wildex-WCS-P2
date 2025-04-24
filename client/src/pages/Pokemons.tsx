@@ -42,7 +42,6 @@ function Pokemons() {
         // We use Promise.all to wait for all the fetches to finish before resolving the promise
         Promise.all(allPokemons).then((results: pokemonType[]) => {
           setPokemons(results);
-          console.info(results);
         });
       });
   }, []);
