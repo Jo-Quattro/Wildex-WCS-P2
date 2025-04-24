@@ -6,9 +6,15 @@ interface genResponse {
 }
 
 // Defining the types for the Pokemon data we put in our state
+interface pokemonTypeType {
+  type: {
+    name: string;
+  };
+}
 interface pokemonType {
   name: string;
   id: number;
+  types: pokemonTypeType[];
   sprites: {
     other: {
       "official-artwork": {
@@ -40,11 +46,20 @@ function Pokemons() {
         });
       });
   }, []);
-  // A retirer a la prochaine US
-  console.info(pokemons);
+
   return (
     <>
-      <h1>coucou</h1>
+      {pokemons.map((pokemon) => (
+        <div key={pokemon.id} className="card">
+          <img
+            src={pokemon.sprites.other["official-artwork"].front_default}
+            alt={pokemon.name}
+          />
+          <h2>{pokemon.name}</h2>
+          <h2>{pokemon.types[0].type.name}</h2>
+          <p>#{pokemon.id}</p>
+        </div>
+      ))}
     </>
   );
 }
