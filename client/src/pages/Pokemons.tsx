@@ -36,18 +36,15 @@ function Pokemons() {
         // We use Promise.all to wait for all the fetches to finish before resolving the promise
         Promise.all(allPokemons).then((results: pokemonType[]) => {
           setPokemons(results);
+          console.info(results);
         });
       });
   }, []);
+  // A retirer a la prochaine US
+  console.info(pokemons);
   return (
     <>
-      {pokemons.map((pokemon) => (
-        <img
-          key={pokemon.id}
-          src={pokemon.sprites.other["official-artwork"].front_default}
-          alt={pokemon.name}
-        />
-      ))}
+      <h1>coucou</h1>
     </>
   );
 }
