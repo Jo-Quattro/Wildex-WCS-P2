@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 // This props define the types of the data we get from the API (an array of objects)
 interface genResponse {
@@ -27,6 +28,7 @@ interface pokemonType {
 
 function Pokemons() {
   const [pokemons, setPokemons] = useState<pokemonType[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/generation/1/") //Fetching the 151 first Pokemons
@@ -46,10 +48,24 @@ function Pokemons() {
       });
   }, []);
 
+  const handlePokemonClick = (name: string) => {
+    // Naviguer vers la page de détails du Pokémon
+    navigate(`/pokemons/${name}`);
+  };
+
   return (
     <>
       {pokemons.map((pokemon) => (
-        <div key={pokemon.id} className="card">
+        <div
+          key={pokemon.id}
+          className="card"
+          onClick={() => handlePokemonClick(pokemon.name)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handlePokemonClick(pokemon.name);
+            }
+          }}
+        >
           <img
             src={pokemon.sprites.other["official-artwork"].front_default}
             alt={pokemon.name}

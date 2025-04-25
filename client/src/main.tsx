@@ -2,6 +2,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
+import PokemonDetails from "./components/PokemonDetails";
 
 /* ************************************************************************* */
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/pokemons",
         element: <Pokemons />,
+      },
+      {
+        path: "/pokemons/:name", // Dynamic route for Pokemon details
+        element: <PokemonDetails />,
       },
     ],
   }, // Try adding a new route! For example, "/about" with an About component
