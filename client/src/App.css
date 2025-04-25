@@ -120,13 +120,13 @@ header > nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    & > img {
-      object-fit: cover;
-      width: 600px;
-      height: 400px;
-      margin: 20px;
-    }
   }
+}
+.regionImg {
+  object-fit: cover;
+  width: 600px;
+  height: 400px;
+  margin: 20px;
 }
 
 .title-map {
