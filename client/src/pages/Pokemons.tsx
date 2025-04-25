@@ -59,7 +59,7 @@ function Pokemons() {
 
   const handlePokemonClick = (name: string) => {
     // Naviguer vers la page de détails du Pokémon
-    navigate(`/pokemons/${name}`);
+    navigate(`/pokemonDetails/${name}`);
   };
 
   return (

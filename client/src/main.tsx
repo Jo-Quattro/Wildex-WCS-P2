@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Pokemons />,
       },
       {
-        path: "/pokemons/:name", // Dynamic route for Pokemon details
+        path: "/pokemonDetails/:name", // Dynamic route for Pokemon details
         element: <PokemonDetails />,
       },
     ],
