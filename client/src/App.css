@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Regular";
+  src: local("regular"), url("./font/MonaSans-Regular.ttf") format("truetype");
+}
+
 header {
   height: 200px;
   width: 100vw;
@@ -70,7 +75,6 @@ header > nav {
     }
   }
 }
-
 .input-subscribe {
   display: flex;
   justify-content: center;
@@ -116,13 +120,13 @@ header > nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    & > img {
-      object-fit: cover;
-      width: 600px;
-      height: 400px;
-      margin: 20px;
-    }
   }
+}
+.regionImg {
+  object-fit: cover;
+  width: 600px;
+  height: 400px;
+  margin: 20px;
 }
 
 .title-map {

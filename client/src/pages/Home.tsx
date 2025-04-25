@@ -1,4 +1,5 @@
 import "../App.css";
+import { Link } from "react-router";
 
 function Home() {
   return (
@@ -20,57 +21,111 @@ function Home() {
         </p>
       </section>
       <section className="map-pokemon">
+        {" "}
         <figure>
-          <img src="./src/assets/images/regionsMap/KantoG1.1.png" alt="" />
+          <Link to={"/Pokemons/1"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/KantoG1.1.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Kanto - G1 - 1996</h3>
           </figcaption>
         </figure>
-
         <figure>
-          <img src="./src/assets/images/regionsMap/JhotoG2.jpg" alt="" />
+          <Link to={"/Pokemons/2"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/JhotoG2.jpg"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map"> Johto - G2 - 1999</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/HoennG3.png" alt="" />
+          <Link to={"/Pokemons/3"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/HoennG3.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Hoenn - Gen 3 - 2002</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/SinnohG4.1.png" alt="" />
+          <Link to={"/Pokemons/4"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/SinnohG4.1.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Sinnoh - Gen 4 - 2006</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/UnysG5.png" alt="" />
+          <Link to={"/Pokemons/5"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/UnysG5.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map"> Unys - Gen 5 - 2011</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/KalosG6.png" alt="" />
+          <Link to={"/Pokemons/6"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/KalosG6.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Kalos - Gen 6 - 2013</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/AlolaG7.png" alt="" />
+          <Link to={"/Pokemons/7"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/AlolaG7.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Alola - Gen 7 - 2016</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/GalarG8.png" alt="" />
+          <Link to={"/Pokemons/8"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/GalarG8.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Galar - Gen - 8 - 2019</h3>
           </figcaption>
         </figure>
         <figure>
-          <img src="./src/assets/images/regionsMap/PaldeaG9.png" alt="" />
+          <Link to={"/Pokemons/9"}>
+            <img
+              className="regionImg"
+              src="./src/assets/images/regionsMap/PaldeaG9.png"
+              alt=""
+            />
+          </Link>
           <figcaption>
             <h3 className="title-map">Paldea - Gen 9 - 2022</h3>
           </figcaption>
