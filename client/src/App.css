@@ -232,9 +232,12 @@ footer > .subscribe {
         margin: 10vh 5vw 0 0;
       }
     }
+    header > nav {
+      display: none;
+      background-color: #f00;
+    }
   }
-  header > nav {
+  header > section > .search-bar {
     display: none;
-    background-color: #f00;
   }
 }

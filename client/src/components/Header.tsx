@@ -1,4 +1,34 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+
 function Header() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [pokemons, setPokemons] = useState<{ name: string; url: string }[]>([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchPokemons = async () => {
+      const response = await fetch(
+        "https://pokeapi.co/api/v2/pokemon?limit=1025",
+      );
+      const data = await response.json();
+      setPokemons(data.results);
+    };
+    fetchPokemons();
+  }, []);
+
+  const handleSearch = () => {
+    const found = pokemons.find(
+      (pokemon) => pokemon.name.toLowerCase() === searchQuery.toLowerCase(),
+    );
+
+    if (found) {
+      navigate(`/pokemonDetails/${found.name}`); // <-- Redirection vers la page du Pokémon
+    } else {
+      alert("Aucun Pokémon trouvé !");
+    }
+  };
+
   return (
     <header>
       <section className="burger-logo-search">
@@ -14,14 +44,20 @@ function Header() {
             alt="Logo du site"
           />
         </section>
+
         <section className="search-bar">
           <label htmlFor="recherche">Pokemon</label>
           <input
             type="text"
             placeholder="Recherche son nom ici !"
             name="recherche"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button type="button">Rechercher</button>
+
+          <button type="button" onClick={handleSearch}>
+            Rechercher
+          </button>
         </section>
       </section>
       <nav>
