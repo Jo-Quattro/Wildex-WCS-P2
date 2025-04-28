@@ -1,24 +1,35 @@
 import "./PokemonCard.css";
 
-interface pokemons {
-  pokemon: {
+interface pokemonTypeType {
+  type: {
     name: string;
-    image: string;
-    type: string;
-    id: number;
+  };
+}
+interface pokemonType {
+  name: string;
+  url: string;
+  front_default: string;
+  id: number;
+  types: pokemonTypeType[];
+  sprites: {
+    other: {
+      "official-artwork": {
+        front_default: string;
+      };
+    };
   };
 }
 
-function PokemonCard({ pokemon }: pokemons) {
+function PokemonCard({ name, id, types, sprites }: pokemonType) {
   return (
     <figure className="pokemon-card">
-      <img src={pokemon.image} alt={pokemon.name} />
+      <img src={sprites.other["official-artwork"].front_default} alt={name} />
       <figcaption>
-        <h2> {pokemon.id} </h2>
+        <h2> {id} </h2>
 
-        <h2>{pokemon.name}</h2>
+        <h2>{name}</h2>
 
-        <div className="pokemon-type">{pokemon.type}</div>
+        <div className="pokemon-type">{types[0].type.name}</div>
       </figcaption>
     </figure>
   );
