@@ -1,6 +1,9 @@
 import "../App.css";
 import "./Footer.css";
 import { useState } from "react";
+import BlueskyLogoWhite from "../assets/images/logoSocial/BlueskyLogoWhite.png";
+import instagramLogoWhite from "../assets/images/logoSocial/InstagramLogoWhite.png";
+import threadsLogoWhite from "../assets/images/logoSocial/threadsLogoWhite.png";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -53,12 +56,12 @@ function Footer() {
           </section>
           <section className="social">
             <a
-              href="https://www.instagram.com/"
+              href="https://bsky.app/profile/thelazyagency.bsky.social"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="./src/assets/images/logoSocial/BlueskyLogoWhite.png"
+                src={BlueskyLogoWhite}
                 alt="Instagram"
                 className="social-icon"
               />
@@ -69,7 +72,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src="./src/assets/images/logoSocial/threadsLogoWhite.png"
+                src={threadsLogoWhite}
                 alt="Threads"
                 className="social-icon"
               />
@@ -80,7 +83,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src="./src/assets/images/logoSocial/InstagramLogoWhite.png"
+                src={instagramLogoWhite}
                 alt="Twitter"
                 className="social-icon"
               />
