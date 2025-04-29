@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import { useParams } from "react-router";
+import PokemonCard from "../components/PokemonCard";
 
 // This props define the types of the data we get from the API (an array of objects)
 interface genResponse {
@@ -15,7 +15,7 @@ interface pokemonTypeType {
 interface pokemonType {
   name: string;
   url: string;
-
+  front_default: string;
   id: number;
   types: pokemonTypeType[];
   sprites: {
@@ -36,7 +36,6 @@ function Pokemons() {
   const { id } = useParams();
 
   const [pokemons, setPokemons] = useState<pokemonType[]>([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/generation/${id}`) //Fetching the 151 first Pokemons
@@ -57,32 +56,20 @@ function Pokemons() {
       });
   }, [id]);
 
-  const handlePokemonClick = (name: string) => {
-    // Naviguer vers la page de détails du Pokémon
-    navigate(`/pokemonDetails/${name}`);
-  };
-
   return (
     <>
       {pokemons.map((pokemon) => (
-        <div
+        <PokemonCard
           key={pokemon.id}
-          className="card"
-          onClick={() => handlePokemonClick(pokemon.name)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              handlePokemonClick(pokemon.name);
-            }
-          }}
-        >
-          <img
-            src={pokemon.sprites.other["official-artwork"].front_default}
-            alt={pokemon.name}
-          />
-          <h2>{pokemon.name}</h2>
-          <h2>{pokemon.types[0].type.name}</h2>
-          <p>#{pokemon.id}</p>
-        </div>
+          name={pokemon.name}
+          id={pokemon.id}
+          types={pokemon.types}
+          url={pokemon.url}
+          front_default={
+            pokemon.sprites.other["official-artwork"].front_default
+          }
+          sprites={pokemon.sprites}
+        />
       ))}
     </>
   );
