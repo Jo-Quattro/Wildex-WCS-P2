@@ -9,6 +9,12 @@
   src: local("regular"), url("./font/MonaSans-Regular.ttf") format("truetype");
 }
 
+body {
+  font-family: "Regular", sans-serif;
+  background-color: #fdfdfd;
+  color: #1d2c5e;
+}
+
 header {
   height: 200px;
   width: 100vw;
