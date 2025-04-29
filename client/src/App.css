@@ -241,3 +241,10 @@ footer > .subscribe {
     display: none;
   }
 }
+
+.pokemonCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}

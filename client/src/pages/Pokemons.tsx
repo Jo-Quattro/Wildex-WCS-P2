@@ -57,7 +57,7 @@ function Pokemons() {
   }, [id]);
 
   return (
-    <>
+    <section className="pokemonCardContainer">
       {pokemons.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}
@@ -71,7 +71,7 @@ function Pokemons() {
           sprites={pokemon.sprites}
         />
       ))}
-    </>
+    </section>
   );
 }
 
