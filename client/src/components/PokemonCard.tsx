@@ -1,4 +1,5 @@
 import "./PokemonCard.css";
+import { Link } from "react-router";
 
 interface pokemonTypeType {
   type: {
@@ -23,10 +24,12 @@ interface pokemonType {
 function PokemonCard({ name, id, types, sprites }: pokemonType) {
   return (
     <figure className="pokemon-card">
-      <img
-        src={sprites.other["official-artwork"].front_default}
-        alt={`pokemon ${name}`}
-      />
+      <Link to={`/pokemonDetails/${name}`}>
+        <img
+          src={sprites.other["official-artwork"].front_default}
+          alt={`pokemon ${name}`}
+        />
+      </Link>
       <figcaption>
         <h2> {id} </h2>
 
