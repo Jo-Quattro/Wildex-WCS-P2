@@ -51,13 +51,15 @@ function Pokemons() {
         // We use Promise.all to wait for all the fetches to finish before resolving the promise
         Promise.all(allPokemons).then((results: pokemonType[]) => {
           setPokemons(results);
-          console.info(results);
+          // Pokemons will now been displayed in dorder of their ID
+          const sortedPokemons = results.sort((a, b) => a.id - b.id);
+          setPokemons(sortedPokemons);
         });
       });
   }, [id]);
 
   return (
-    <>
+    <section className="pokemonCardContainer">
       {pokemons.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}
@@ -71,7 +73,7 @@ function Pokemons() {
           sprites={pokemon.sprites}
         />
       ))}
-    </>
+    </section>
   );
 }
 
