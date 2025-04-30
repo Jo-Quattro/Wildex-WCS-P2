@@ -159,6 +159,22 @@ footer > .social-legal {
   width: 100%;
   height: 100%;
 }
+/* accessibility us22 */
+.legal > p {
+  color: black;
+}
+.subscribe > label {
+  color: black;
+}
+.search-bar > button {
+  background-color: #3466af;
+}
+
+.wildex-logo-title {
+  display: flex;
+  flex-direction: column;
+}
+/* accessibility us22  */
 footer > section > .legal {
   display: flex;
   justify-content: center;

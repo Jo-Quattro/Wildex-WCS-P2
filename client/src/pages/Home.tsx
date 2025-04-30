@@ -5,10 +5,10 @@ function Home() {
   return (
     <>
       <section className="paragraphe">
+        <h1>Bienvenue dans l'univers complet de Pokémon !</h1>
         <p>
-          Bienvenue dans l'univers complet de Pokémon ! Notre site vous propose
-          une expérience immersive à travers les 9 générations de ces créatures
-          fascinantes.
+          Notre site vous propose une expérience immersive à travers les 9
+          générations de ces créatures fascinantes.
         </p>
         <p>
           Explorez notre collection complète de cartes Pokémon, découvrez les
@@ -27,11 +27,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/KantoG1.1.png"
-              alt=""
+              alt="Region Kanto"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Kanto - G1 - 1996</h3>
+            <h2 className="title-map">Kanto - G1 - 1996</h2>
           </figcaption>
         </figure>
         <figure>
@@ -39,11 +39,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/JhotoG2.jpg"
-              alt=""
+              alt="Region Johto"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map"> Johto - G2 - 1999</h3>
+            <h2 className="title-map"> Johto - G2 - 1999</h2>
           </figcaption>
         </figure>
         <figure>
@@ -51,11 +51,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/HoennG3.png"
-              alt=""
+              alt="Region Hoenn"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Hoenn - Gen 3 - 2002</h3>
+            <h2 className="title-map">Hoenn - Gen 3 - 2002</h2>
           </figcaption>
         </figure>
         <figure>
@@ -63,11 +63,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/SinnohG4.1.png"
-              alt=""
+              alt="Region Sinnoh"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Sinnoh - Gen 4 - 2006</h3>
+            <h2 className="title-map">Sinnoh - Gen 4 - 2006</h2>
           </figcaption>
         </figure>
         <figure>
@@ -75,11 +75,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/UnysG5.png"
-              alt=""
+              alt="Region Unys"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map"> Unys - Gen 5 - 2011</h3>
+            <h2 className="title-map"> Unys - Gen 5 - 2011</h2>
           </figcaption>
         </figure>
         <figure>
@@ -87,11 +87,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/KalosG6.png"
-              alt=""
+              alt="Region Kalos"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Kalos - Gen 6 - 2013</h3>
+            <h2 className="title-map">Kalos - Gen 6 - 2013</h2>
           </figcaption>
         </figure>
         <figure>
@@ -99,11 +99,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/AlolaG7.png"
-              alt=""
+              alt="Region Alola"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Alola - Gen 7 - 2016</h3>
+            <h2 className="title-map">Alola - Gen 7 - 2016</h2>
           </figcaption>
         </figure>
         <figure>
@@ -111,11 +111,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/GalarG8.png"
-              alt=""
+              alt="Region Galar"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Galar - Gen - 8 - 2019</h3>
+            <h2 className="title-map">Galar - Gen - 8 - 2019</h2>
           </figcaption>
         </figure>
         <figure>
@@ -123,11 +123,11 @@ function Home() {
             <img
               className="regionImg"
               src="./src/assets/images/regionsMap/PaldeaG9.png"
-              alt=""
+              alt="Region Paldea"
             />
           </Link>
           <figcaption>
-            <h3 className="title-map">Paldea - Gen 9 - 2022</h3>
+            <h2 className="title-map">Paldea - Gen 9 - 2022</h2>
           </figcaption>
         </figure>
       </section>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import MenuBurgerRed from "../assets/images/menuBurgerRed.svg";
 import WildexlogoV1 from "../assets/images/WildexlogoV1.png";
+import MenuBurgerRed from "../assets/images/menuBurgerRed.svg";
 
 function Header() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,6 +42,7 @@ function Header() {
         <section className="search-bar">
           <label htmlFor="recherche">Pokemon</label>
           <input
+            id="recherche"
             type="text"
             placeholder="Recherche son nom ici !"
             name="recherche"

@@ -52,7 +52,7 @@ function Footer() {
       <footer>
         <section className="social-legal">
           <section className="legal">
-            <p>©️Wildéx 2025</p>
+            <p>Wildéx 2025</p>
           </section>
           <section className="social">
             <a
@@ -91,15 +91,18 @@ function Footer() {
           </section>
         </section>
         <section className="subscribe">
+          <label htmlFor="subscribe"> Souscrire à la newsletter </label>
           <input
+            id="subscribe"
             type="email"
-            placeholder="Souscrire à la newsletter "
+            placeholder="Email "
             className="input-subscribe"
             name="subscribe"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+
           <button
             type="button"
             className="btn-subscribe"
