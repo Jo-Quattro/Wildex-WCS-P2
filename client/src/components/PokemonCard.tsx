@@ -23,11 +23,14 @@ interface pokemonType {
 function PokemonCard({ name, id, types, sprites }: pokemonType) {
   return (
     <figure className="pokemon-card">
-      <img src={sprites.other["official-artwork"].front_default} alt={name} />
+      <img
+        src={sprites.other["official-artwork"].front_default}
+        alt={`pokemon ${name}`}
+      />
       <figcaption>
         <h2> {id} </h2>
 
-        <h2>{name}</h2>
+        <h1>{name}</h1>
 
         <div className="pokemon-type">{types[0].type.name}</div>
       </figcaption>
