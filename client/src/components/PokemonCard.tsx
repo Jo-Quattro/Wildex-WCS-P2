@@ -32,7 +32,7 @@ function PokemonCard({ name, id, types, sprites }: pokemonType) {
         />
       </Link>
       <figcaption>
-        <h2> {id} </h2>
+        <h2>#{String(id).padStart(4, "0")}</h2>
 
         <h1>{name}</h1>
         <div className="pokemon-types">
