@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import WildexlogoV1 from "../assets/images/WildexlogoV1.png";
-import MenuBurgerRed from "../assets/images/menuBurgerRed.svg";
+import BurgerMenu from "./BurgerMenu";
 
 function Header() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,9 +33,9 @@ function Header() {
 
   return (
     <header>
+      <BurgerMenu />
       <section className="burger-logo-search">
         <section className="section-menu-burger">
-          <img className="menu-burger" src={MenuBurgerRed} alt="Menu burger" />
           <Link to={"/"}>
             <img className="logo" src={WildexlogoV1} alt="Logo du site" />
           </Link>
@@ -57,19 +57,6 @@ function Header() {
           </button>
         </section>
       </section>
-      <nav>
-        <ul>
-          <li>Gen1</li>
-          <li>Gen2</li>
-          <li>Gen3</li>
-          <li>Gen4</li>
-          <li>Gen5</li>
-          <li>Gen6</li>
-          <li>Gen7</li>
-          <li>Gen8</li>
-          <li>Gen9</li>
-        </ul>
-      </nav>
     </header>
   );
 }
