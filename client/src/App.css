@@ -9,6 +9,12 @@
   src: local("regular"), url("./font/MonaSans-Regular.ttf") format("truetype");
 }
 
+body {
+  font-family: "Regular", sans-serif;
+  background-color: #fdfdfd;
+  color: #1d2c5e;
+}
+
 header {
   height: 200px;
   width: 100vw;
@@ -25,6 +31,7 @@ header > section > .section-menu-burger {
   align-content: center;
   width: 50vw;
 }
+/* Need to adjust the path to target the (only ".logo" seem to work)  */
 header > section > section > .logo {
   height: 150px;
   width: 389px;
@@ -75,6 +82,15 @@ header > nav {
     }
   }
 }
+
+/* Page Pokemons */
+.pokemonCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .input-subscribe {
   display: flex;
   justify-content: center;
@@ -153,6 +169,22 @@ footer > .social-legal {
   width: 100%;
   height: 100%;
 }
+/* accessibility us22 */
+.legal > p {
+  color: black;
+}
+.subscribe > label {
+  color: black;
+}
+.search-bar > button {
+  background-color: #3466af;
+}
+
+.wildex-logo-title {
+  display: flex;
+  flex-direction: column;
+}
+/* accessibility us22  */
 footer > section > .legal {
   display: flex;
   justify-content: center;
@@ -232,9 +264,12 @@ footer > .subscribe {
         margin: 10vh 5vw 0 0;
       }
     }
+    header > nav {
+      display: none;
+      background-color: #f00;
+    }
   }
-  header > nav {
+  header > section > .search-bar {
     display: none;
-    background-color: #f00;
   }
 }
