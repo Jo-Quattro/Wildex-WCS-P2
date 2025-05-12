@@ -33,8 +33,8 @@ function Header() {
 
   return (
     <header>
-      <BurgerMenu />
       <section className="burger-logo-search">
+        <BurgerMenu />
         <section className="section-menu-burger">
           <Link to={"/"}>
             <img className="logo" src={WildexlogoV1} alt="Logo du site" />
