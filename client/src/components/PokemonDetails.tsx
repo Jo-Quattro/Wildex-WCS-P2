@@ -123,7 +123,7 @@ function PokemonDetails() {
           </span>
         ))}
       </p>
-      <p>Pokemon #{pokemon.id}</p>
+      <p>Pokemon #{String(pokemon.id).padStart(4, "0")}</p>
 
       {/* Affichage des stats */}
       <div>
