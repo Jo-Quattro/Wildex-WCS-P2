@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import typeColors from "./TypeColors";
 
 interface PokemonDetails {
   name: string;
@@ -107,7 +108,21 @@ function PokemonDetails() {
         src={pokemon.sprites.other["official-artwork"].front_default}
         alt={pokemon.name}
       />
-      <p>Types: {pokemon.types.map((t) => t.type.name).join(", ")}</p>
+      {/* <p>Types: {pokemon.types.map((t) => t.type.name).join(", ")}</p> */}
+      <p>
+        Types:{" "}
+        {pokemon.types.map((t) => (
+          <span
+            key={t.type.name}
+            style={{
+              backgroundColor:
+                typeColors[t.type.name as keyof typeof typeColors],
+            }}
+          >
+            {t.type.name}
+          </span>
+        ))}
+      </p>
       <p>Pokemon #{pokemon.id}</p>
 
       {/* Affichage des stats */}
