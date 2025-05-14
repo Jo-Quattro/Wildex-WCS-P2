@@ -14,7 +14,7 @@
 }
 
 .pokemon-img {
-  width: 70%;
+  width: 45%;
   height: auto;
   margin: 0 auto;
 }
@@ -54,8 +54,7 @@
   text-align: center;
 }
 .pokemon-evo-img {
-  width: 50%;
-  height: auto;
+  width: 220px;
   margin: 0 auto;
 }
 .pokemon-evo-name {
