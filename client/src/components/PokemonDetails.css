@@ -22,7 +22,7 @@
   width: 100vw;
   padding: 2rem 0;
 }
-.pokemon-funfact-title {
+.pokemon-title {
   color: #ccc;
   font-family: MonaSans-Regular, sans-serif;
   font-weight: 600;
@@ -68,14 +68,6 @@
   background-color: #fff;
 }
 
-.pokemon-stats {
-  justify-content: center;
-  text-align: center;
-  list-style: none;
-  display: flex;
-  font-family: MonaSans-Regular, sans-serif;
-}
-
 .pokemon-attack-title {
   color: #ccc;
   font-family: MonaSans-Regular, sans-serif;
@@ -114,4 +106,40 @@
   .pokemon-evo-img {
     width: 30%;
   }
+}
+
+/* Grid charts.css*/
+
+#statsSection {
+  width: 460px;
+  position: relative;
+  z-index: -1;
+  justify-self: center;
+}
+.statsTable {
+  width: fit-content;
+}
+
+.data {
+  transform: rotate(-90deg);
+
+  position: relative;
+  align-self: center;
+}
+.statCol {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 30px;
+}
+
+.pokemonGrid {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+}
+.pokemon-stats {
+  z-index: -1;
+  padding: 2rem 0;
+  width: 100vw;
+  background-color: #f8f8f8;
 }
