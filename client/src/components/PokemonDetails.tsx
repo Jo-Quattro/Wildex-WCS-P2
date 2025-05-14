@@ -115,6 +115,7 @@ function PokemonDetails() {
         Types:{" "}
         {pokemon.types.map((t) => (
           <span
+            className="pkmTypes"
             key={t.type.name}
             style={{
               backgroundColor:

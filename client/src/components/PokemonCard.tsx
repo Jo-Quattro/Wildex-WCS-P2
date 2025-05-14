@@ -39,7 +39,7 @@ function PokemonCard({ name, id, types, sprites }: pokemonType) {
           {types.map((typeObj) => (
             <span
               key={typeObj.type.name}
-              className="pokemon-type"
+              className="pkmTypes"
               style={{
                 backgroundColor:
                   typeColors[typeObj.type.name as keyof typeof typeColors],

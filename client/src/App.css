@@ -282,3 +282,10 @@ footer > .subscribe {
     display: none;
   }
 }
+
+/* Style types */
+.pkmTypes {
+  padding: 0 4px;
+  margin-right: 3px;
+  border-radius: 4px;
+}
