@@ -1,0 +1,117 @@
+.pokemon-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pokemon-name-title {
+  font-family: MonaSans-Regular, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.pokemon-img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.pokemon-funfact {
+  width: 100vw;
+  padding: 2rem 0;
+}
+.pokemon-funfact-title {
+  color: #ccc;
+  font-family: MonaSans-Regular, sans-serif;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+.pokemon-funfact-text {
+  text-align: center;
+  font-family: MonaSans-Regular, sans-serif;
+  width: 90vw;
+}
+
+.pokemon-evolution-title {
+  color: #ccc;
+  font-family: MonaSans-Regular, sans-serif;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.pokemon-evolution {
+  background-color: #f8f8f8;
+  padding: 2rem 0;
+  width: 100vw;
+}
+
+.pokemon-evo-img-name {
+  margin: 0 auto;
+  text-align: center;
+}
+.pokemon-evo-img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+.pokemon-evo-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pokemon-title-stats {
+  color: #ccc;
+  background-color: #fff;
+}
+
+.pokemon-stats {
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  font-family: MonaSans-Regular, sans-serif;
+}
+
+.pokemon-attack-title {
+  color: #ccc;
+  font-family: MonaSans-Regular, sans-serif;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+.pokemon-attack {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  margin: 1rem 0;
+}
+
+.pokemon-capacity-attack {
+  font-style: normal;
+  font-weight: 510;
+  font-family: MonaSans-Regular, sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  list-style: none;
+  width: 100vw;
+}
+
+.pokemon-attack-li {
+  padding: 1.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .pokemon-img {
+    width: 45%;
+  }
+  .pokemon-evo-img {
+    width: 30%;
+  }
+}
