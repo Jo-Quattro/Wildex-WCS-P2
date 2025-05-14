@@ -14,14 +14,14 @@ body {
   background-color: #fdfdfd;
   color: #1d2c5e;
 }
-
+/* header v2 */
 header {
-  background-color: #fdfdfd;
-  height: 200px;
-  width: 100vw;
-  border-bottom: #f00 .25px solid;
   position: sticky;
   top: 0;
+  background-color: #fdfdfd;
+  border-bottom: #f00 .25px solid;
+  height: 130px;
+  width: 100vw;
 }
 
 a {
@@ -29,26 +29,26 @@ a {
   color: #333;
 }
 
-header > .burger-logo-search {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 160px;
-}
 header > section > .section-menu-burger {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
+  height: 100px;
 }
-/* Need to adjust the path to target the (only ".logo" seem to work)  */
+/* Need to adjust the path to target the (only ".logo" seem to work)  header 22*/
 .logo {
-  height: 16vh;
-  width: auto;
+  height: 100px;
 }
+
 header > section > section > .menu-burger {
   width: 48px;
 }
+
+/* header v2 */
 header > section > .search-bar {
+  position: absolute;
+  top: 20px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ header > section > .search-bar {
 }
 header > section > .search-bar > input {
   height: 30px;
-  width: 230px;
+
   outline: none;
   margin: 10px 0;
   background-color: #3466af;
@@ -225,38 +225,6 @@ footer > .subscribe {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  header > section > section > .logo {
-    height: 80px;
-    width: auto;
-  }
-  nav {
-    display: none;
-  }
-  footer {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100vw;
-    padding: 10px 0;
-  }
-  footer > .social-legal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  .social {
-    margin: 20px 0;
-  }
-  .legal {
-    margin: 20px 0;
-
-    color: #fdfdfd;
-  }
-}
-
 @media screen and (max-width: 576px) {
   header > .burger-logo-search {
     display: flex;
@@ -269,9 +237,9 @@ footer > .subscribe {
       & > .menu-burger {
         margin: 10vh 0 0 0;
       }
-      & > .logo {
-        margin: 10vh 5vw 0 0;
-      }
+    }
+    .logo {
+      height: 100px;
     }
     header > nav {
       display: none;
@@ -280,6 +248,10 @@ footer > .subscribe {
   }
   header > section > .search-bar {
     display: none;
+  }
+  header {
+    height: 130px;
+    background-color: #fdfdfd;
   }
 }
 
