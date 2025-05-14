@@ -1,5 +1,6 @@
 import "./PokemonCard.css";
 import { Link } from "react-router";
+import typeColors from "./TypeColors";
 
 interface pokemonTypeType {
   type: {
@@ -31,14 +32,25 @@ function PokemonCard({ name, id, types, sprites }: pokemonType) {
         />
       </Link>
       <figcaption>
-        <h2> {id} </h2>
+        <h2>#{String(id).padStart(4, "0")}</h2>
 
         <h1>{name}</h1>
-
-        <div className="pokemon-type">{types[0].type.name}</div>
+        <div className="pokemon-types">
+          {types.map((typeObj) => (
+            <span
+              key={typeObj.type.name}
+              className="pokemon-type"
+              style={{
+                backgroundColor:
+                  typeColors[typeObj.type.name as keyof typeof typeColors],
+              }}
+            >
+              {typeObj.type.name}
+            </span>
+          ))}
+        </div>
       </figcaption>
     </figure>
   );
 }
-
 export default PokemonCard;

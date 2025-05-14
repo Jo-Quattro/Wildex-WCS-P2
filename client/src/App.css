@@ -16,8 +16,12 @@ body {
 }
 
 header {
+  background-color: #fdfdfd;
   height: 200px;
   width: 100vw;
+  border-bottom: #f00 .25px solid;
+  position: sticky;
+  top: 0;
 }
 
 a {
@@ -35,12 +39,11 @@ header > section > .section-menu-burger {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  width: 50vw;
 }
 /* Need to adjust the path to target the (only ".logo" seem to work)  */
-header > section > section > .logo {
-  height: 150px;
-  width: 389px;
+.logo {
+  height: 16vh;
+  width: auto;
 }
 header > section > section > .menu-burger {
   width: 48px;
