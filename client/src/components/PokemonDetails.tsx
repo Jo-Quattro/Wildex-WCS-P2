@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import typeColors from "./TypeColors";
 import "./PokemonDetails.css";
+import "charts.css";
 
 interface PokemonDetails {
   name: string;
@@ -129,20 +130,42 @@ function PokemonDetails() {
 
       {/* Affichage des stats */}
       <section className="pokemon-stats">
-        <h2 className="pokemon-title-stats">Stats</h2>
-        <ul className="pokemon-stats">
-          {pokemon.stats.map((stat) => (
-            <li key={stat.stat.name}>
-              {stat.stat.name}: {stat.base_stat}
-            </li>
-          ))}
-        </ul>
+        <h2 className="pokemon-title">Stats</h2>
+        <section id="statsSection">
+          <table className="charts-css column show-labels data-spacing-20 datasets-spacing-5 data-start statsTable">
+            <tbody>
+              <tr>
+                {pokemon.stats.map((stat) => (
+                  <td
+                    key={stat.stat.name}
+                    style={
+                      {
+                        "--size": `${stat.base_stat} / 95`,
+                        backgroundColor:
+                          typeColors[
+                            pokemon.types[0].type
+                              .name as keyof typeof typeColors
+                          ],
+                      } as React.CSSProperties
+                    }
+                    className="statCol"
+                  >
+                    {stat.base_stat / 100 > 0.45 ? (
+                      <span className="data">{stat.stat.name}</span>
+                    ) : (
+                      ""
+                    )}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
-
       {/* Affichage du fun fact */}
       {funFact && (
         <section className="pokemon-funfact">
-          <h2 className="pokemon-funfact-title">Fun Fact</h2>
+          <h2 className="pokemon-title">Fun Fact</h2>
           <p className="pokemon-funfact-text">{funFact}</p>
         </section>
       )}
@@ -170,7 +193,7 @@ function PokemonDetails() {
       )}
       {/* Ajout des attaques */}
       <section className="pokemon-attack">
-        <h2 className="pokemon-attack-title">Attaques</h2>
+        <h2 className="pokemon-title">Attaques</h2>
         <ul className="pokemon-capacity-attack">
           {pokemon.moves.slice(0, 4).map((move) => (
             <li className="pokemon-attack-li" key={move.move.name}>
