@@ -24,6 +24,11 @@ header {
   width: 100vw;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 header > section > .section-menu-burger {
   display: flex;
   justify-content: space-around;
