@@ -5,10 +5,6 @@
   justify-content: center;
   width: 100%;
 }
-footer {
-  display: none;
-}
-
 .pokemon-header {
   display: flex;
   flex-direction: column;
@@ -116,7 +112,7 @@ footer {
 .pokemon-attack-li {
   padding: 1.5rem 0;
 }
-
+/*Mode desktop*/
 @media screen and (min-width: 768px) {
   .pokemon-header {
     display: flex;
