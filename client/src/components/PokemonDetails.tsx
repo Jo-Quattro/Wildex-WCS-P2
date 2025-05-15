@@ -105,30 +105,54 @@ function PokemonDetails() {
 
   return (
     <section className="pokemon-details">
-      <h1 className="pokemon-name-title">{pokemon.name}</h1>
-      <img
-        className="pokemon-img"
-        src={pokemon.sprites.other["official-artwork"].front_default}
-        alt={pokemon.name}
-      />
+      <section className="pokemon-header">
+        <section>
+          <h1 className="pokemon-name-title">{pokemon.name}</h1>
+          <img
+            className="pokemon-img"
+            src={pokemon.sprites.other["official-artwork"].front_default}
+            alt={pokemon.name}
+          />
+        </section>
 
-      <p>
-        Types:{" "}
-        {pokemon.types.map((t) => (
-          <span
-            className="pkmTypes"
-            key={t.type.name}
-            style={{
-              backgroundColor:
-                typeColors[t.type.name as keyof typeof typeColors],
-            }}
-          >
-            {t.type.name}
-          </span>
-        ))}
-      </p>
-      <p>Pokemon #{String(pokemon.id).padStart(4, "0")}</p>
-
+        <section className="pokemon-header-type">
+          <section className="pokemon-header-type-number">
+            <p>
+              {pokemon.types.map((t) => (
+                <span
+                  className="pkmTypes"
+                  key={t.type.name}
+                  style={{
+                    backgroundColor:
+                      typeColors[t.type.name as keyof typeof typeColors],
+                  }}
+                >
+                  {t.type.name}
+                </span>
+              ))}
+            </p>
+            <p>N°{String(pokemon.id).padStart(4, "0")}</p>
+          </section>
+          {/* Affichage du fun fact */}
+          {funFact && (
+            <section className="pokemon-funfact">
+              <h2 className="pokemon-title">Fun Fact</h2>
+              <p className="pokemon-funfact-text">{funFact}</p>
+            </section>
+          )}
+          {/* Ajout des attaques */}
+          <section className="pokemon-attack">
+            <h2 className="pokemon-title">Attaques</h2>
+            <ul className="pokemon-capacity-attack">
+              {pokemon.moves.slice(0, 4).map((move) => (
+                <li className="pokemon-attack-li" key={move.move.name}>
+                  {move.move.name}
+                </li> // Affiche le nom de chaque attaque
+              ))}
+            </ul>
+          </section>
+        </section>
+      </section>
       {/* Affichage des stats */}
       <section className="pokemon-stats">
         <h2 className="pokemon-title">Stats</h2>
@@ -163,46 +187,30 @@ function PokemonDetails() {
           </table>
         </section>
       </section>
-      {/* Affichage du fun fact */}
-      {funFact && (
-        <section className="pokemon-funfact">
-          <h2 className="pokemon-title">Fun Fact</h2>
-          <p className="pokemon-funfact-text">{funFact}</p>
-        </section>
-      )}
-
+      {/* Affichage de l'évolution */}
       {evolution.length > 0 ? (
         <section className="pokemon-evolution">
           <h2 className="pokemon-evolution-title">Évolutions</h2>
-          {evolution.map((evo) => (
-            <>
-              <section className="pokemon-evo-img-name" key={evo.name}>
-                <a href={`/pokemons/${evo.name}`}>
-                  <img
-                    className="pokemon-evo-img"
-                    src={evo.image}
-                    alt={evo.name}
-                  />
-                  <p className="pokemon-evo-name">{evo.name}</p>
-                </a>
-              </section>
-            </>
-          ))}
+          <section className="pokemon-evolution-list">
+            {evolution.map((evo) => (
+              <>
+                <section className="pokemon-evo-img-name" key={evo.name}>
+                  <a href={`/pokemons/${evo.name}`}>
+                    <img
+                      className="pokemon-evo-img"
+                      src={evo.image}
+                      alt={evo.name}
+                    />
+                    <p className="pokemon-evo-name">{evo.name}</p>
+                  </a>
+                </section>
+              </>
+            ))}
+          </section>
         </section>
       ) : (
         <p>Ce Pokémon n’évolue pas.</p>
       )}
-      {/* Ajout des attaques */}
-      <section className="pokemon-attack">
-        <h2 className="pokemon-title">Attaques</h2>
-        <ul className="pokemon-capacity-attack">
-          {pokemon.moves.slice(0, 4).map((move) => (
-            <li className="pokemon-attack-li" key={move.move.name}>
-              {move.move.name}
-            </li> // Affiche le nom de chaque attaque
-          ))}
-        </ul>
-      </section>
     </section>
   );
 }
