@@ -36,7 +36,7 @@ header > section > .section-menu-burger {
   align-content: center;
   height: 100px;
 }
-/* Need to adjust the path to target the (only ".logo" seem to work)  header 22*/
+/* Need to adjust the path to target the (only ".logo" seem to work)  header v2*/
 .logo {
   height: 100px;
 }
@@ -101,42 +101,10 @@ header > nav {
   gap: 2rem;
 }
 
-.input-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-
-  margin: 0 1vw;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #fdfdfd;
-  border-left: 1px solid #fdfdfd;
-  border-radius: 5px;
-  background-color: #ff4444;
-  color: #fdfdfd;
-  &::placeholder {
-    color: #ffaaaa;
-    text-align: center;
-  }
-}
-
-.btn-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 115px;
-  margin: 0 1vw;
-  outline: none;
-  border: 2px solid #ff0000;
-  border-radius: 5px;
-  background-color: #fdfdfd;
-}
-
 .map-pokemon {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
   align-content: center;
   width: 100vw;
@@ -149,9 +117,7 @@ header > nav {
   }
 }
 .regionImg {
-  object-fit: cover;
-  width: 600px;
-  height: 400px;
+  width: 100%;
 }
 
 .title-map {
@@ -162,31 +128,7 @@ header > nav {
   font-size: 120%;
   width: 100vw;
   text-align: center;
-  margin-top: 50px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-  background-color: #ff0000;
-  height: 150px;
-}
-footer > .social-legal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-/* accessibility us22 */
-.legal > p {
-  color: black;
-}
-.subscribe > label {
-  color: black;
-}
-.search-bar > button {
-  background-color: #3466af;
+  margin: 50px 0;
 }
 
 .wildex-logo-title {
@@ -194,35 +136,6 @@ footer > .social-legal {
   flex-direction: column;
 }
 /* accessibility us22  */
-footer > section > .legal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: #fdfdfd;
-}
-footer > section > .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: #ff0000;
-}
-.social > a > .social-icon {
-  height: 30px;
-  width: 30px;
-  margin: 0 1vw;
-}
-
-footer > .subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1vw;
-  height: 100%;
-}
 
 @media screen and (max-width: 576px) {
   header > .burger-logo-search {
@@ -237,9 +150,7 @@ footer > .subscribe {
         margin: 10vh 0 0 0;
       }
     }
-    .logo {
-      height: 100px;
-    }
+
     header > nav {
       display: none;
       background-color: #f00;
@@ -252,13 +163,10 @@ footer > .subscribe {
     height: 130px;
     background-color: #fdfdfd;
   }
-  .subscribe {
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-  }
-  .subscribe > label {
-    text-align: center;
+}
+@media screen and (max-width: 378px) {
+  .logo {
+    height: 65px;
   }
 }
 

@@ -98,19 +98,9 @@
   padding: 1.5rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .pokemon-img {
-    width: 45%;
-  }
-  .pokemon-evo-img {
-    width: 30%;
-  }
-}
-
 /* Grid charts.css*/
 
 #statsSection {
-  width: 460px;
   position: relative;
   z-index: -1;
   justify-self: center;
@@ -121,7 +111,6 @@
 
 .data {
   transform: rotate(-90deg);
-
   position: relative;
   align-self: center;
 }
@@ -141,4 +130,18 @@
   padding: 2rem 0;
   width: 100vw;
   background-color: #f8f8f8;
+}
+.data {
+  font-size: small;
+}
+@media screen and (min-width: 768px) {
+  .pokemon-img {
+    width: 45%;
+  }
+  .pokemon-evo-img {
+    width: 30%;
+  }
+  .data {
+    font-size: x-large;
+  }
 }

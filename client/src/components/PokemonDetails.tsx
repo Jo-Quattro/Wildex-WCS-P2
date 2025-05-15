@@ -133,7 +133,7 @@ function PokemonDetails() {
       <section className="pokemon-stats">
         <h2 className="pokemon-title">Stats</h2>
         <section id="statsSection">
-          <table className="charts-css column show-labels data-spacing-20 datasets-spacing-5 data-start statsTable">
+          <table className="charts-css column show-labels datasets-spacing-5 data-start statsTable">
             <tbody>
               <tr>
                 {pokemon.stats.map((stat) => (

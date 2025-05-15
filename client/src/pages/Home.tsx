@@ -26,7 +26,7 @@ function Home() {
           <Link to={"/Pokemons/1"}>
             <img
               className="regionImg"
-              src="./src/assets/images/regionsMap/KantoG1.1.png"
+              src="./src/assets/images/regionsMap/KantoG1.png"
               alt="Region Kanto"
             />
           </Link>
@@ -62,7 +62,7 @@ function Home() {
           <Link to={"/Pokemons/4"}>
             <img
               className="regionImg"
-              src="./src/assets/images/regionsMap/SinnohG4.1.png"
+              src="./src/assets/images/regionsMap/SinnohG4.png"
               alt="Region Sinnoh"
             />
           </Link>
