@@ -13,6 +13,7 @@ body {
   font-family: "Regular", sans-serif;
   background-color: #fdfdfd;
   color: #1d2c5e;
+  position: relative;
 }
 /* header v2 */
 header {
