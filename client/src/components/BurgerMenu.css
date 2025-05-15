@@ -88,6 +88,6 @@ section.nav {
     width: 13rem;
   }
   div.generation.visible {
-    align-items: unset;
+    width: fit-content;
   }
 }
