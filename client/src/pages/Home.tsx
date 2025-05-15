@@ -5,19 +5,20 @@ function Home() {
   return (
     <>
       <section className="paragraphe">
-        <h1>Bienvenue dans l'univers complet de Pokémon !</h1>
+        <h1>Welcome to the fabulous world of Pokémon !</h1>
         <p>
-          Notre site vous propose une expérience immersive à travers les 9
-          générations de ces créatures fascinantes.
+          Our website offers you an immersive experience through the 9
+          generations of these fascinating creatures (and a 10th rumored to come
+          !).
         </p>
         <p>
-          Explorez notre collection complète de cartes Pokémon, découvrez les
-          caractéristiques uniques de chaque région, et plongez dans les
-          statistiques détaillées de vos Pokémon préférés.
+          Explore our complete collection of Pokémon, discover the unique
+          features of each region, and dive into the detailed stats of your
+          favorite Pokémon.
         </p>
         <p>
-          De Kanto à Paldea, embarquez pour un voyage extraordinaire à travers
-          tous les aspects qui font la richesse de cet univers légendaire.
+          From Kanto to Paldea, embark on an extraordinary journey through all
+          the elements that make this legendary universe so rich.
         </p>
       </section>
       <section className="map-pokemon">

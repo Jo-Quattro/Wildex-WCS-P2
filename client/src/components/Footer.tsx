@@ -13,20 +13,20 @@ function Footer() {
 
   const handleSubscribe = () => {
     if (!email.trim()) {
-      setError("Veuillez entrer une adresse email");
+      setError("Please enter you e-mail adress");
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError("Veuillez entrer une adresse email valide.");
+      setError("Please enter a valid adress.");
       return;
     }
 
     setError("");
     setIsSubmitting(true);
     setTimeout(() => {
-      setSuccessMessage(`Merci pour votre inscription, ${email} !`);
+      setSuccessMessage(`Thanks for the subscription, ${email} !`);
       setEmail(""); // Remet l'input à vide après
       setIsSubmitting(false); // Réinitialisation de l'état d'envoi
 
@@ -91,7 +91,7 @@ function Footer() {
           </section>
         </section>
         <section className="subscribe">
-          <label htmlFor="subscribe"> Souscrire à la newsletter </label>
+          <label htmlFor="subscribe"> Subscribe to the Newsletter </label>
           <input
             id="subscribe"
             type="email"
@@ -109,7 +109,7 @@ function Footer() {
             onClick={handleSubscribe}
             disabled={!isEmailValid || isSubmitting}
           >
-            {isSubmitting ? "Envoi..." : "S'inscrire"}
+            {isSubmitting ? "Pending..." : "Subscribe"}
           </button>
         </section>
       </footer>
