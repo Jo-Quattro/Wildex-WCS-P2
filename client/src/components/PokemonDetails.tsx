@@ -142,7 +142,7 @@ function PokemonDetails() {
           )}
           {/* Ajout des attaques */}
           <section className="pokemon-attack">
-            <h2 className="pokemon-title">Attaques</h2>
+            <h2 className="pokemon-title">Moves</h2>
             <ul className="pokemon-capacity-attack">
               {pokemon.moves.slice(0, 4).map((move) => (
                 <li className="pokemon-attack-li" key={move.move.name}>
@@ -190,7 +190,7 @@ function PokemonDetails() {
       {/* Affichage de l'évolution */}
       {evolution.length > 0 ? (
         <section className="pokemon-evolution">
-          <h2 className="pokemon-evolution-title">Évolutions</h2>
+          <h2 className="pokemon-evolution-title">Evolutions</h2>
           <section className="pokemon-evolution-list">
             {evolution.map((evo) => (
               <>
