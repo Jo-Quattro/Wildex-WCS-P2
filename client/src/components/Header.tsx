@@ -27,7 +27,7 @@ function Header() {
     if (found) {
       navigate(`/pokemonDetails/${found.name}`); // <-- Redirection vers la page du Pokémon
     } else {
-      alert("Aucun Pokémon trouvé !");
+      alert("No pokemon found !");
     }
   };
 
@@ -42,18 +42,18 @@ function Header() {
         </section>
 
         <section className="search-bar">
-          <label htmlFor="recherche">Pokemon</label>
+          <label htmlFor="recherche">Pokémon</label>
           <input
             id="recherche"
             type="text"
-            placeholder="Recherche son nom ici !"
-            name="recherche"
+            placeholder="Enter it's name here"
+            name="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
 
           <button type="button" onClick={handleSearch}>
-            Rechercher
+            Search
           </button>
         </section>
       </section>

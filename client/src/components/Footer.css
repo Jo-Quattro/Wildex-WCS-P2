@@ -1,3 +1,86 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ff0000;
+  height: 150px;
+}
+footer > .social-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.legal > p {
+  color: black;
+}
+.subscribe > label {
+  color: black;
+}
+.search-bar > button {
+  background-color: #3466af;
+}
+footer > section > .legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fdfdfd;
+}
+footer > section > .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ff0000;
+}
+.social > a > .social-icon {
+  height: 30px;
+  width: 30px;
+  margin: 0 1vw;
+}
+.input-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 200px;
+  margin: 0 1vw;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fdfdfd;
+  border-left: 1px solid #fdfdfd;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fdfdfd;
+  &::placeholder {
+    color: #ffaaaa;
+    text-align: center;
+  }
+}
+
+.btn-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 115px;
+  margin: 0 1vw;
+  outline: none;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+}
+
+footer > .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1vw;
+  height: 100%;
+}
 .success-message {
   font-size: 16px;
   color: green;
@@ -12,4 +95,18 @@
 
 .success-message span {
   font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .input-subscribe {
+    width: 100px;
+  }
+  .subscribe {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .subscribe > label {
+    text-align: center;
+  }
 }
