@@ -24,7 +24,7 @@ export default function BackButton() {
       onClick={handleReturnToPokemons}
       className="back-button"
     >
-      ⬅ Retour
+      ⬅ Return
     </button>
   );
 }
