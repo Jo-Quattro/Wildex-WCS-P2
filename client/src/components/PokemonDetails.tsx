@@ -195,7 +195,7 @@ function PokemonDetails() {
             {evolution.map((evo) => (
               <>
                 <section className="pokemon-evo-img-name" key={evo.name}>
-                  <a href={`/pokemons/${evo.name}`}>
+                  <a href={`/pokemonDetails/${evo.name}`}>
                     <img
                       className="pokemon-evo-img"
                       src={evo.image}
