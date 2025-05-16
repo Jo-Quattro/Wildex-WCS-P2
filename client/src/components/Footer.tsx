@@ -1,5 +1,4 @@
 import "../App.css";
-import "./Footer.css";
 import { useState } from "react";
 import SocialLinks from "./SocialLinks";
 
