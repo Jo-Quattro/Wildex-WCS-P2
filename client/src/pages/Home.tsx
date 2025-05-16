@@ -1,5 +1,14 @@
 import "../App.css";
 import { Link } from "react-router";
+import AlolaG7 from "../assets/images/regionsMap/AlolaG7.png";
+import GalarG8 from "../assets/images/regionsMap/GalarG8.png";
+import HoennG3 from "../assets/images/regionsMap/HoennG3.png";
+import JhotoG2 from "../assets/images/regionsMap/JhotoG2.jpg";
+import KalosG6 from "../assets/images/regionsMap/KalosG6.png";
+import KantoG1 from "../assets/images/regionsMap/KantoG1.png";
+import PaldeaG9 from "../assets/images/regionsMap/PaldeaG9.png";
+import SinnohG4 from "../assets/images/regionsMap/SinnohG4.png";
+import UnysG5 from "../assets/images/regionsMap/UnysG5.png";
 
 function Home() {
   return (
@@ -25,11 +34,7 @@ function Home() {
         {" "}
         <figure>
           <Link to={"/Pokemons/1"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/KantoG1.png"
-              alt="Region Kanto"
-            />
+            <img className="regionImg" src={KantoG1} alt="Region Kanto" />
           </Link>
           <figcaption>
             <h2 className="title-map">Kanto - G1 - 1996</h2>
@@ -37,11 +42,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/2"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/JhotoG2.jpg"
-              alt="Region Johto"
-            />
+            <img className="regionImg" src={JhotoG2} alt="Region Johto" />
           </Link>
           <figcaption>
             <h2 className="title-map"> Johto - G2 - 1999</h2>
@@ -49,11 +50,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/3"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/HoennG3.png"
-              alt="Region Hoenn"
-            />
+            <img className="regionImg" src={HoennG3} alt="Region Hoenn" />
           </Link>
           <figcaption>
             <h2 className="title-map">Hoenn - Gen 3 - 2002</h2>
@@ -61,11 +58,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/4"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/SinnohG4.png"
-              alt="Region Sinnoh"
-            />
+            <img className="regionImg" src={SinnohG4} alt="Region Sinnoh" />
           </Link>
           <figcaption>
             <h2 className="title-map">Sinnoh - Gen 4 - 2006</h2>
@@ -73,11 +66,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/5"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/UnysG5.png"
-              alt="Region Unys"
-            />
+            <img className="regionImg" src={UnysG5} alt="Region Unys" />
           </Link>
           <figcaption>
             <h2 className="title-map"> Unys - Gen 5 - 2011</h2>
@@ -85,11 +74,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/6"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/KalosG6.png"
-              alt="Region Kalos"
-            />
+            <img className="regionImg" src={KalosG6} alt="Region Kalos" />
           </Link>
           <figcaption>
             <h2 className="title-map">Kalos - Gen 6 - 2013</h2>
@@ -97,11 +82,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/7"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/AlolaG7.png"
-              alt="Region Alola"
-            />
+            <img className="regionImg" src={AlolaG7} alt="Region Alola" />
           </Link>
           <figcaption>
             <h2 className="title-map">Alola - Gen 7 - 2016</h2>
@@ -109,11 +90,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/8"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/GalarG8.png"
-              alt="Region Galar"
-            />
+            <img className="regionImg" src={GalarG8} alt="Region Galar" />
           </Link>
           <figcaption>
             <h2 className="title-map">Galar - Gen - 8 - 2019</h2>
@@ -121,11 +98,7 @@ function Home() {
         </figure>
         <figure>
           <Link to={"/Pokemons/9"}>
-            <img
-              className="regionImg"
-              src="./src/assets/images/regionsMap/PaldeaG9.png"
-              alt="Region Paldea"
-            />
+            <img className="regionImg" src={PaldeaG9} alt="Region Paldea" />
           </Link>
           <figcaption>
             <h2 className="title-map">Paldea - Gen 9 - 2022</h2>
