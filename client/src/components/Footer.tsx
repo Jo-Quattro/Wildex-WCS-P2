@@ -91,9 +91,8 @@ function Footer() {
           </section>
         </section>
         <section className="subscribe">
-          <label htmlFor="subscribe"> Subscribe to the Newsletter </label>
           <input
-            id="subscribe"
+            aria-label="subscribe"
             type="email"
             placeholder="Email "
             className="input-subscribe"
