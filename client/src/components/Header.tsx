@@ -40,10 +40,9 @@ function Header() {
             <img className="logo" src={WildexlogoV1} alt="Logo du site" />
           </Link>
         </section>
-
         <section className="search-bar">
-          <label htmlFor="recherche">Pokémon</label>
           <input
+            aria-label="research"
             id="recherche"
             type="text"
             placeholder="Enter it's name here"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import pokeball from "../assets/images/pokeball.png";
 import "./BurgerMenu.css";
 
 const BurgerMenu = () => {
@@ -37,32 +38,50 @@ const BurgerMenu = () => {
       <div className={menu_class} />
 
       <div className={generation_class}>
-        <Link className="genone" to="/Pokemons/1">
-          Gen 1 <p>sortie:1996</p>
+        <Link to="/Pokemons/1">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 1</span> <br />
+          <p className="genDate">1996</p>
         </Link>
-        <Link className="gentwo" to="/Pokemons/2">
-          Gen 2 <p>sortie:1999</p>
+        <Link to="/Pokemons/2">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 2</span> <br />
+          <p className="genDate">1999</p>
         </Link>
-        <Link className="genthree" to="/Pokemons/3">
-          Gen 3 <p>sortie:2002</p>
+        <Link to="/Pokemons/3">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 3</span> <br />
+          <p className="genDate">2002</p>
         </Link>
-        <Link className="genfour" to="/Pokemons/4">
-          Gen 4 <p>sortie:2006</p>
+        <Link to="/Pokemons/4">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 4</span> <br />
+          <p className="genDate">2006</p>
         </Link>
-        <Link className="genfive" to="/Pokemons/5">
-          Gen 5 <p>sortie:2011</p>
+        <Link to="/Pokemons/5">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 5</span> <br />
+          <p className="genDate">2011</p>
         </Link>
-        <Link className="gensix" to="/Pokemons/6">
-          Gen 6 <p>sorie:2013</p>
+        <Link to="/Pokemons/6">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 6</span> <br />
+          <p className="genDate">2013</p>
         </Link>
-        <Link className="genseven" to="/Pokemons/7">
-          Gen 7 <p>sortie:2016</p>
+        <Link to="/Pokemons/7">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 7</span> <br />
+          <p className="genDate">2016</p>
         </Link>
-        <Link className="geneight" to="/Pokemons/8">
-          Gen 8 <p>sortie2019</p>
+        <Link to="/Pokemons/8">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 8</span> <br />
+          <p className="genDate">2019</p>
         </Link>
-        <Link className="gennine" to="/Pokemons/9">
-          Gen 9 <p>sortie:2022</p>
+        <Link to="/Pokemons/9">
+          <img src={pokeball} alt="icon pokeball" className="pokeBallIcon" />{" "}
+          <span className="genNumber">Gen 9</span> <br />
+          <p className="genDate">2022</p>
         </Link>
       </div>
     </aside>

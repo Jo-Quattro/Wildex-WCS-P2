@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .pokemon-card {
   padding: 16px;
   background-color: #f0f0f0;
