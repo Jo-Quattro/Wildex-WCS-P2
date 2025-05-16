@@ -55,33 +55,21 @@ function Footer() {
             <p>Wildéx 2025</p>
           </section>
           <section className="social">
-            <a
-              href="https://bsky.app/profile/thelazyagency.bsky.social"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <img
                 src={BlueskyLogoWhite}
                 alt="Instagram"
                 className="social-icon"
               />
             </a>
-            <a
-              href="https://www.threads.net/@thelazyagency/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <img
                 src={threadsLogoWhite}
                 alt="Threads"
                 className="social-icon"
               />
             </a>
-            <a
-              href="https://www.instagram.com/thelazyagency/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <img
                 src={instagramLogoWhite}
                 alt="Twitter"
