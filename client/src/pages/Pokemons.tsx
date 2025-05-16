@@ -65,21 +65,24 @@ function Pokemons() {
   }, [id]);
 
   return (
-    <section className="pokemonCardContainer">
-      {pokemons.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.id}
-          name={pokemon.name}
-          id={pokemon.id}
-          types={pokemon.types}
-          url={pokemon.url}
-          front_default={
-            pokemon.sprites.other["official-artwork"].front_default
-          }
-          sprites={pokemon.sprites}
-        />
-      ))}
-    </section>
+    <>
+      <h1 className="Generation-numbers">Generation {id}</h1>
+      <section className="pokemonCardContainer">
+        {pokemons.map((pokemon) => (
+          <PokemonCard
+            key={pokemon.id}
+            name={pokemon.name}
+            id={pokemon.id}
+            types={pokemon.types}
+            url={pokemon.url}
+            front_default={
+              pokemon.sprites.other["official-artwork"].front_default
+            }
+            sprites={pokemon.sprites}
+          />
+        ))}
+      </section>
+    </>
   );
 }
 

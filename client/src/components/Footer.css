@@ -3,6 +3,7 @@ footer {
   justify-content: space-around;
   background-color: #ff0000;
   height: 150px;
+  margin-top: 2rem;
 }
 footer > .social-legal {
   display: flex;
