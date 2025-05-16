@@ -1,9 +1,7 @@
 import "../App.css";
 import "./Footer.css";
 import { useState } from "react";
-import BlueskyLogoWhite from "../assets/images/logoSocial/BlueskyLogoWhite.png";
-import instagramLogoWhite from "../assets/images/logoSocial/InstagramLogoWhite.png";
-import threadsLogoWhite from "../assets/images/logoSocial/threadsLogoWhite.png";
+import SocialLinks from "./SocialLinks";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -49,53 +47,19 @@ function Footer() {
           {successMessage}
         </p>
       )}
-      <footer>
-        <section className="social-legal">
-          <section className="legal">
-            <p>Wildéx 2025</p>
-          </section>
-          <section className="social">
-            <a
-              href="https://bsky.app/profile/thelazyagency.bsky.social"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={BlueskyLogoWhite}
-                alt="Instagram"
-                className="social-icon"
-              />
-            </a>
-            <a
-              href="https://www.threads.net/@thelazyagency/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={threadsLogoWhite}
-                alt="Threads"
-                className="social-icon"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/thelazyagency/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={instagramLogoWhite}
-                alt="Twitter"
-                className="social-icon"
-              />
-            </a>
-          </section>
+      <footer className="bg-red-500 flex flex-row h-25 justify-around items-center">
+        <section className="w-35 text-white">
+          <p>Wildéx 2025</p>
         </section>
-        <section className="subscribe">
+        <section className="justify-self-end w-35">
+          <SocialLinks />
+        </section>
+        <section className="flex flex-col gap-2 w-35 text-white">
           <input
             aria-label="subscribe"
             type="email"
             placeholder="Email "
-            className="input-subscribe"
+            className="text-center border-b-1 border-l-1 border-white"
             name="subscribe"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -104,7 +68,7 @@ function Footer() {
 
           <button
             type="button"
-            className="btn-subscribe"
+            className="bg-white text-red-500 rounded"
             onClick={handleSubscribe}
             disabled={!isEmailValid || isSubmitting}
           >
