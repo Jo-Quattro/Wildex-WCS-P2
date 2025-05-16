@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useLocation, useParams } from "react-router";
 import PokemonCard from "../components/PokemonCard";
 
 // This props define the types of the data we get from the API (an array of objects)
@@ -34,6 +34,12 @@ function getId(url: string) {
 
 function Pokemons() {
   const { id } = useParams();
+
+  const location = useLocation();
+  //On stock l'url de notre page Pokemons/{id}, en lui donnant le nom "savedUrl"
+  useEffect(() => {
+    localStorage.setItem("savedUrl", location.pathname);
+  });
 
   const [pokemons, setPokemons] = useState<pokemonType[]>([]);
 
