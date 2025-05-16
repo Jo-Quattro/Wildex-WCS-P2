@@ -34,7 +34,7 @@ function PokemonCard({ name, id, types, sprites }: pokemonType) {
       <figcaption>
         <h2>#{String(id).padStart(4, "0")}</h2>
 
-        <h1>{name}</h1>
+        <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         <div className="pokemon-types">
           {types.map((typeObj) => (
             <span

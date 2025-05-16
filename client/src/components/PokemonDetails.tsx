@@ -107,7 +107,9 @@ function PokemonDetails() {
     <section className="pokemon-details">
       <section className="pokemon-header">
         <section>
-          <h1 className="pokemon-name-title">{pokemon.name}</h1>
+          <h1 className="pokemon-name-title">
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </h1>
           <img
             className="pokemon-img"
             src={pokemon.sprites.other["official-artwork"].front_default}
@@ -201,7 +203,9 @@ function PokemonDetails() {
                       src={evo.image}
                       alt={evo.name}
                     />
-                    <p className="pokemon-evo-name">{evo.name}</p>
+                    <p className="pokemon-evo-name">
+                      {evo.name.charAt(0).toUpperCase() + evo.name.slice(1)}
+                    </p>
                   </a>
                 </section>
               </>
