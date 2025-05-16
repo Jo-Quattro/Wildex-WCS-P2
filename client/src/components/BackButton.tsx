@@ -1,11 +1,17 @@
 // src/components/BackButton.tsx
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "./BackButton.css";
 
 export default function BackButton() {
-  const location = useLocation();
   const navigate = useNavigate();
 
+  // On va chercher notre "savedUrl" stockée a l'arrivée dans notre page Pokemons/{id} afin de retourner vers celle-ci.
+  const handleReturnToPokemons = () => {
+    const urlToPokemons = localStorage.getItem("savedUrl");
+    if (urlToPokemons != null) {
+      navigate(urlToPokemons);
+    }
+  };
   const isOnPokemonPage =
     location.pathname.startsWith("/pokemons/") ||
     location.pathname.startsWith("/pokemonDetails/");
@@ -14,11 +20,11 @@ export default function BackButton() {
 
   return (
     <button
-      type="button" // 👈 ici
-      onClick={() => navigate(-1)}
+      type="button"
+      onClick={handleReturnToPokemons}
       className="back-button"
     >
-      ⬅ Retour
+      ⬅ Return
     </button>
   );
 }
