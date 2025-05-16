@@ -197,7 +197,12 @@ function PokemonDetails() {
             {evolution.map((evo) => (
               <>
                 <section className="pokemon-evo-img-name" key={evo.name}>
-                  <Link to={`/pokemonDetails/${evo.name}`}>
+                  <Link
+                    to={`/pokemonDetails/${evo.name}`}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
                     <img
                       className="pokemon-evo-img"
                       src={evo.image}
